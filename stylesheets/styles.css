@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'lakeshore';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/LAKESHOR-webfont.eot');
+  src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/LAKESHOR-webfont.woff') format('woff'),
+       url('fonts/LAKESHOR-webfont.tff') format('truetype'),
+       url('fonts/LAEKSHOR-webfont.svg#lakeshore') format('svg');
+}
 body {
   font-size: 10px;
 }
@@ -6,19 +16,32 @@ a {
   text-decoration: none;
 }
 
+.logo-text {
+  background: white;
+  text-align: center;
+  font-size: 37px;
+  text-transform: uppercase;
+  font-family: lakeshore;
+}
+
 .thumbnail-image {
   display: block;
   width: 100%;
 }
 
+.thumbnail-item + .thumbnail-item { /*This adds a top margin of 10px to any consecutive thumbnail-items so all except for the top most thumbnail-item*/
+  margin-top: 10px;
+}
+
 .thumbnail-item {
-  border: 1px solid rgb(100%, 100% ,100%);
+  border: 1px solid rgb(100%, 100% ,100%); /*Browsers that support rgba will use the second line, those that don't recognize it will use the first*/
   border: 1px solid rgba(100%, 100%, 100%, 0.8);
   display: block;
 }
 
 .thumbnail-list {
   list-style: none;
+  padding: 0;
 }
 
 .thumbnail-title {
